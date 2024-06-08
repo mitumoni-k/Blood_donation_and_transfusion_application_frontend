@@ -1,0 +1,161 @@
+.slide-component-main-container {
+    margin: 6rem auto;
+    width: 80%;
+    height: 662px;
+}
+
+.heading {
+    font-size: 67px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(35, 241, 214), rgb(154, 15, 73));;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin: -10px;
+}
+
+.slide-container {
+    height: 28rem;
+}
+
+.article-image {
+    width: 30rem;
+    height: 28rem;
+    border-radius: 45px;
+}
+
+.slide {
+    transform: scale(0.5);
+    transition: transform 500ms;
+    opacity: 0.6;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.slide img {
+    width: 28rem;
+    margin: 0 auto;
+}
+
+.title-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: height 0.9s ease;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+}
+
+.title.expanded {
+    font-size: 25px;
+    margin: 0;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #030303;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: rgb(232, 231, 231);
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.slide:hover .title-container {
+    height: 100%;
+    margin: auto auto;
+    width: 100%;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide:hover .title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 100%;
+}
+
+.activeSlide {
+    margin-top: 6rem;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.arrow {
+    background: -webkit-linear-gradient(rgb(207, 84, 245), rgb(254, 114, 114));
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow svg {
+    transition: color 200ms;
+}
+
+.arrow svg:hover {
+    color: bisque;
+}
+
+.next {
+    top: 50%;
+    right: 0%;
+}
+
+.prev {
+    left: 0%;
+    top: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .slide-component-main-container {
+        width: 80%;
+    }
+
+    .slide img {
+        width: 11rem;
+        height: 18rem;
+    }
+}

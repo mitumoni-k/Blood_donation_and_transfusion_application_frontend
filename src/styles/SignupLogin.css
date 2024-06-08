@@ -1,0 +1,101 @@
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Apply blur effect to the background image */
+    z-index: -1; /* Send the background image behind other content */
+}
+
+  
+  .signup-login-container {
+    max-width: 528px;
+    width: 613px;
+    padding: 35px 92px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgb(64, 63, 63);
+    background-color:  rgb(240, 252, 255); /* Add a semi-transparent background color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h2 {
+    margin-bottom: 1px;
+    text-align: center;
+    font-size: 28px;
+    color: rgb(185, 49, 49); 
+  }
+
+  h6 {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(89, 87, 87); 
+  }
+  
+  .signup-login-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    width: 100%; /* Make input and select full width */
+    padding: 9px; /* Equal padding on all sides */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .select-role {
+    width: 80%; /* Make role select full width */
+  }
+  
+  .signup-login-button {
+    width: 40%;
+    font-size :16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block; /* Set display to block to enable margin */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .signup-login-button button:hover {
+    background-color: rgb(1, 90, 1);
+  }
+  
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: rgb(63, 65, 155);
+  }
+
+  img {
+    display: block;
+    margin: auto;
+    width: 90px; /* Adjust the width as needed */
+    height: 80px; /* Maintain aspect ratio */
+    /* margin-bottom: 2px; */
+  }

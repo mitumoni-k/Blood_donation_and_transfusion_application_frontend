@@ -1,0 +1,355 @@
+.map-page {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.map-section {
+  width: 75%;
+  border: 1px solid #000000;
+}
+
+.map-search-section {
+  width: 25%;
+  border: 1px solid #000000;
+}
+
+.map-search-form {
+  display: flex;
+  margin-top: 8px;
+}
+
+.map-search-form div {
+  display: flex;
+}
+
+.map-search-bar {
+  position: relative;
+  display: flex;
+}
+
+.map-search-bar input[type="text"] {
+  width: 215px; 
+  height: 45px;
+  border-radius: 120px;
+  flex: 1;
+  font-weight: bold;
+  margin-right: 5px; 
+  padding: 5px;
+  font-size: 15px;
+  padding-left: 10px;
+  background-color: #e0e2e3;
+  border: 2px solid #000000;
+}
+
+.location-search-icon {
+  position: absolute;
+  top: 40%;
+  right: 7px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid #e0e2e4;
+  background-color: #e0e2e4;
+  color: #000000;
+  margin-left: -45px;
+}
+
+
+.map-search-form button:hover {
+  background-color: #ffffff;
+}
+
+.map-search-section select {
+  width: 180px;
+  border-radius: 120px;
+  font-size: 15px;
+  margin-left: 10px;
+  padding: 4px;
+  font-weight: bold;
+  background-color: rgb(221, 199, 199);
+  color: rgb(83, 7, 7);
+  appearance: none;
+  border: 2px solid #9a0202;
+}
+
+.map-search-section select option {
+  background-color: white;
+  color: black;
+  font-size: 17px;
+}
+
+.map-search-results {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.map-search-result {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.map-search-result p {
+  margin: 0;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.map-search-result p.bold {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.map-search-result span {
+  font-weight: bold;
+}
+
+.map-request-button {
+  padding: 5px 10px;
+  background-color: darkred;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 110px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.map-donate-button {
+  padding: 5px 10px;
+  background-color: darkred;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 110px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.map-request-button:hover {
+  background-color: rgb(197, 10, 10);
+}
+
+.map-request-civilian-button {
+  display: flex;
+  margin: 0 auto;
+  padding-left: 17px;
+  align-items: center;
+  background-color: rgb(81, 4, 4);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 216px;
+  font-size: 20px;
+  margin-bottom: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.map-request-civilian-button:hover {
+  background-color: rgb(144, 8, 8);
+}
+
+.marker-popup {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1450px) {
+  .map-page {
+    flex-direction: row;
+  }
+
+  .map-section {
+    width: 75%;
+  }
+
+  .map-search-section {
+    width: 25%;
+  }
+
+  .map-search-result p {
+    
+    font-size: medium;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .map-search-results h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .map-request-civilian-button {
+    display: flex;
+    margin: 5px auto;
+    padding-left: 18px;
+    align-items: center;
+    background-color: rgb(81, 4, 4);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 12px;
+    width: 186px;
+    font-size: 16px;
+    margin-bottom: 17rem;
+    height: 3rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .map-search-bar input[type="text"] {
+    width: 75%; 
+    height: 45px;
+    border-radius: 120px;
+    flex: 1;
+    font-weight: bold;
+    margin-right: 5px; 
+    padding: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: #e0e2e3;
+    border: 2px solid #000000;
+  }
+
+  .map-request-button{
+    margin: auto;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  .map-donate-button{
+    margin: auto; 
+  }
+  .map-search-form {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .map-search-form button:hover {
+    background-color: #ffffff;
+  }
+
+  .map-search-section select {
+    width: 75%;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 120px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .map-page {
+    flex-direction: row;
+  }
+
+  .map-section {
+    width: 75%;
+  }
+
+  .map-search-section {
+    width: 25%;
+  }
+
+  .map-search-result p {
+    margin: 0;
+    font-size: medium;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .map-search-results h1 {
+    font-size: 20px;
+  }
+
+  .map-request-civilian-button {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 12px;
+    align-items: center;
+    background-color: rgb(81, 4, 4);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 100px;
+    font-size: 12px;
+    margin-bottom: 17rem;
+    height: 3rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .map-search-form {
+    flex-direction: column;
+  }
+
+  .map-search-form button:hover {
+    background-color: #ffffff;
+  }
+
+  .map-search-section select {
+    width: 100%;
+    font-size: 11px;
+    border-radius: 120px;
+    margin: 5px 0;
+  }
+
+  .map-request-button{
+    margin: auto;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
+  .map-donate-button{
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-page {
+    flex-direction: column;
+  }
+
+  .map-section,
+  .map-search-section {
+    width: 100%;
+  }
+
+  .map-search-form {
+    flex-direction: column;
+  }
+
+  .map-search-form input[type="text"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .location-search-icon {
+    margin-top: 5px;
+  }
+
+  .map-search-section select {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .map-request-civilian-button {
+    margin-bottom: 2rem;
+  }
+}

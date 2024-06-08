@@ -1,0 +1,367 @@
+.profile-container {
+  padding: 40px;
+  background-color: azure;
+  height: 90vh;
+  background: linear-gradient(#007bff, #fff);
+}
+
+.profile-heading {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: darkblue;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(206, 202, 252);
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 70vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.profile-image {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-right: 200px;
+  position: relative;
+}
+
+.edit-profile-button {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.edit-profile-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-add-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 36px;
+  color: #888;
+}
+
+.profile-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.profile-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.profile-details {
+  margin-left: 20px;
+}
+
+.profile-detail {
+  margin-bottom: 10px;
+  padding-right: 150px;
+}
+
+.profile-detail h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.profile-detail p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.profile-button-container {
+  margin-top: 20px;
+}
+
+.profile-button input[type="file"],
+.add-image-button-label input[type="file"] {
+  display: none;
+}
+
+.add-inventory-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-inventory-content {
+    position: relative;
+    background-color: #c3a9ec;
+    padding: 30px 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+
+  .cross-close{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+.add-inventory-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.add-inventory-content button {
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 8px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease; 
+}
+
+.add-inventory-content button:hover {
+  border: 4px solid #fff; 
+}
+
+.inventory-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.inventory-modal-content {
+  background-color: #e0bdf7;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cross-close {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.cross-close:hover {
+  color: #323131;
+}
+.show-inventory-cross-close {
+  position: fixed;
+  top: 8px;
+  right: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.show-inventory-cross-close:hover {
+  color: #ffffff;
+}
+
+
+.inventory-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.inventory-modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-modal-content th,
+.inventory-modal-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.inventory-modal-content th {
+  background-color: #b37ed7;
+}
+
+.inventory-modal-content tbody tr{
+  background-color: #c59aba;
+}
+
+.inventory-modal-content tbody tr:hover {
+  background-color: #c59aba;
+}
+
+.inventory-modal-content button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.inventory-modal-content button:hover {
+  background-color: #45a049;
+  border: 2px solid white;
+}
+
+.inventory-modal-content h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+/* UPDATE INVENTORY MODAL */
+.update-inventory-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.update-inventory-content {
+  position: relative;
+  background-color: #e0bdf7;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+/* .cross-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+} */
+
+.update-inventory-content h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.update-inventory-content div {
+  margin-bottom: 15px;
+}
+
+.update-inventory-content label {
+  font-weight: bold;
+}
+
+.update-inventory-content input,
+.update-inventory-content select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.update-inventory-content button{
+  display: inline-block;
+}
+
+.update-inventory-content .save-button  {
+  padding: 10px 25px;
+  margin-top: 20px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.update-inventory-content .cancel-button  {
+  padding: 10px 25px;
+  margin-top: 20px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d21616;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.update-inventory-content button:hover {
+  border: 3px solid white;
+}
