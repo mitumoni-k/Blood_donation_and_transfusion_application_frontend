@@ -1,6 +1,5 @@
 import React from 'react'
 import "../styles/Parallax.css"
-import logo from "../assets/healthcare.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faEnvelope, faHeart} from "@fortawesome/free-solid-svg-icons"
 import {faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons"
