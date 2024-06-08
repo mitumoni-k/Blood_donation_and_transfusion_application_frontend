@@ -1,10 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import bg1 from "../assets/mainPageBG1.jpeg"
-import bg2 from "../assets/mainPageBG2.jpeg"
-import bg3 from "../assets/mainPageBG3.jpeg"
-
-
-const images_array = [bg1,bg2,bg3]
 
 
 function SlideShow() {
