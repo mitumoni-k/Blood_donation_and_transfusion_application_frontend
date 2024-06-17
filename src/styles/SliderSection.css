@@ -421,7 +421,7 @@
     width: 102% !important;
   }
 }
-@media screen and (1025px <= width <= 2561px) {
+@media screen and (1025px <= width <= 1441px) {
   .card-wrapper {
     padding: 10px 7%;
   }
