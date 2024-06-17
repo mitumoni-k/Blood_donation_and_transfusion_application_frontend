@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/Parallax.css"
 import "../styles/MainPage.css"
 import logoimg from "../assets/LoginSignupImg.png"
+// import logoimg from "../assets/Landing_page_bg.jpeg"
 import DonateRequestIcons from './DonateRequestIcons'
 import SliderSection from "./SliderSection";
 import Information from "./Information";
@@ -11,7 +12,8 @@ const ParallaxBg = () => {
   return (
     <div className='wrapper'>
       <header>
-      <img className='background_1' src={logoimg} alt="blood hero logo"></img>
+      <img className='background_1' src={logoimg} alt="blood hero logo" />
+      {/* <img className='background_1' src={logoimg} alt="blood hero logo" /> */}
       <h1 className='background_2'>Blood<br></br> Hero </h1>
         <div className='background_writting'>
             <h1 className='content-title'>Transfuse or Donate - <span className='ploo'>Blood</span></h1>

@@ -475,3 +475,57 @@
     width: 100% !important;
   }
 }
+@media screen and (1441px <= width <= 2561px) {
+  .card-wrapper {
+    padding: 10px 7%;
+  }
+  .heading {
+    font-size: 64px;
+  }
+  .arrow {
+    font-size: 14px;
+    width: 29px;
+    height: 29px;
+  }
+  .prev {
+    top: 55%;
+  }
+  .next {
+    top: 55%;
+  }
+  .card-overlay {
+    padding: 0px 18px;
+  }
+  .card-overlay h3 {
+    font-size: 23px;
+    margin-bottom: 26px;
+  }
+  .card-wrapper {
+    margin-top: 39px;
+    margin-bottom: 19px;
+  }
+  .card-overlay p {
+    font-size: 15px;
+  }
+  .card-overlay a {
+    margin-top: 18px;
+    font-size: 10px;
+  }
+  .slide img {
+    width: 27rem;
+    height: 24rem;
+    border-radius: 45px;
+    padding-top: 17px;
+  }
+  .box-area {
+    margin-top: -66px;
+  }
+  #card-area {
+    margin-top: 35px;
+    margin-bottom: 7px;
+  }
+  .activeSlide {
+    /* This was used to override our inline style of width:100% to match our image width */
+    width: 100% !important;
+  }
+}
