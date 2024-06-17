@@ -25,11 +25,14 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar-container">
+        <div className="website-logo-tagline">
         <img src={logo} className="logo" alt="Website Logo" />
         <div className="tagline">
 
           <div className="leftmost-tagline">Serve a Drop</div>
           <div className="left-tagline">Save a Life</div>
+        </div>
+
         </div>
         <div className="navbar">
           {!isLoggedIn && (

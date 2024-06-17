@@ -16,7 +16,7 @@ const SliderSection = () => {
 
   const fetchNews = async () => {
     try {
-      const response = await fetch("https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=de9c498ea0384b5b9bdd03581bb2afa6");
+      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=de9c498ea0384b5b9bdd03581bb2afa6`);
       const data = await response.json();
       const filteredData = data.articles.filter(article => article.urlToImage !== null);
       setNewsData(filteredData);
@@ -49,7 +49,8 @@ const SliderSection = () => {
      
   const settings = {
     infinite: true,
-    lazyload: true,
+    // lazyload: true,
+    autoplay : true,
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
@@ -78,32 +79,23 @@ const SliderSection = () => {
   };
 
   return (
-    <div className="slide-component-main-container">
+    <div id="card-area">
       <h1 className="heading">News & Events</h1>
-      <div className="slide-container">
-        <Slider {...settings}>
-          {newsData.map((article, index) => (
-          <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
-          <a href={article.url} target="_blank" rel="noopener noreferrer">
-            <img src={article.urlToImage} alt="Article" className="article-image" />
-          </a>
-          <div className="title-container">
-            <h3 className={index === hoveredIndex ? "title expanded" : "title"}>
-              {article.title}
-            </h3>
-            {index === hoveredIndex && (
-              <div className="description">
-                <p>{article.description}</p>
-                <a className="read-more-link" href={article.url} target="_blank" rel="noopener noreferrer">
-                  Read more
-                </a>
+      <div className="card-wrapper">
+        <div className="box-area">
+          <Slider {...settings}>
+            {newsData.map((article, index) => (
+              <div key={index} className={index === imageIndex ? " slide activeSlide" : "slide"}>
+                <img src={article.urlToImage} alt="Article" />
+                <div className="card-overlay">
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
+                </div>
               </div>
-            )}
-          </div>
+            ))}
+          </Slider>
         </div>
-        
-          ))}
-        </Slider>
       </div>
     </div>
   );

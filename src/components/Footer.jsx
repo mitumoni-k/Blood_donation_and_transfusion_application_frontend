@@ -36,6 +36,14 @@ const Footer = () => {
         </li>
       </ul>
       </div>
+      <ul className='footer-nav'>
+        <li>
+          <a href='/'>Home</a>
+          <a href=''>About</a>
+          <a href='/team'>Teams</a>
+          <a href='mailto:mitumonikalita2002@gmail.com'>Contact</a>
+          </li>
+      </ul>
       <form className='footer-feedback' action='post'>
         <input type='text' className='footer-feedback-input' placeholder='Feedback...' />
         <button type='Submit' className='footer-feedback-button' onClick={feedbackSubmit}>Submit</button>
@@ -45,14 +53,6 @@ const Footer = () => {
       <p className='footer-desc'>Created with  <FontAwesomeIcon icon={faHeart} style={{color: "#ff0000",}} /> by The Team</p>
       <p className='footer-rights-reserved'>@{new Date().getFullYear()} <strong>Team</strong>. All rights reserved</p>
       </div>
-      <ul className='footer-nav'>
-        <li>
-          <a href='/'>Home</a>
-          <a href=''>About</a>
-          <a href='/team'>Teams</a>
-          <a href='mailto:mitumonikalita2002@gmail.com'>Contact</a>
-          </li>
-      </ul>
     </div>
   )
 }
