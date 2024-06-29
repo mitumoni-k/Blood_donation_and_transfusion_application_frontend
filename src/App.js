@@ -17,7 +17,7 @@ import axios from "axios";
 import RequestCivilianPage from "./pages/RequestCivilianPage";
 
 function App() {
-  const [token,setToken] = useState(null)
+  const [token, setToken] = useState(null);
   const [fcmToken, setFcmToken] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState(null);
@@ -30,7 +30,7 @@ function App() {
     if (tokenCookie) {
       setIsLoggedIn(true); // Set isLoggedIn to true if token exists
       const token = tokenCookie.split("=")[1];
-      setToken(token) // Extract token value from cookie
+      setToken(token); // Extract token value from cookie
       try {
         const decodedToken = jwtDecode(token);
         console.log("decodedToken", decodedToken);
@@ -42,6 +42,7 @@ function App() {
     }
   }, []);
 
+  // FCM Token generation
   useEffect(() => {
     generateToken().then((FCMtoken) => {
       setFcmToken(FCMtoken);
@@ -50,7 +51,7 @@ function App() {
         const decodedToken = jwtDecode(token);
         updateFcmToken(decodedToken, fcmToken);
       }
-    },[]);
+    }, []);
 
     // store the token in variable
     const messaging = getMessaging();
@@ -66,7 +67,7 @@ function App() {
         progress: undefined,
         theme: "colored",
         transition: Bounce,
-      })
+      });
     });
   }, []);
 
@@ -75,12 +76,12 @@ function App() {
 
   const updateFcmToken = async (decodedToken, fcmToken) => {
     const userId = decodedToken.userId || decodedToken.registrationId;
-    const role = decodedToken.role
+    const role = decodedToken.role;
     try {
       const response = await axios.put("/update-fcm-token", {
         userId,
         fcmToken,
-        role
+        role,
       });
       console.log(response.data);
     } catch (error) {
@@ -109,7 +110,9 @@ function App() {
 
           <Route
             path="/login"
-            element={isLoggedIn ? <Navigate to="/" /> : <Login fcmToken={fcmToken}/>}
+            element={
+              isLoggedIn ? <Navigate to="/" /> : <Login fcmToken={fcmToken} />
+            }
           />
 
           <Route
@@ -122,8 +125,6 @@ function App() {
           <Route path="/donateform" element={<DonateForm />} />
 
           <Route path="/requestform" element={<RequestForm />} />
-
-          {/* <Route path="/myprofile" element={isLoggedIn ? <MyProfile /> : <Navigate to="/signup" />} /> */}
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" />

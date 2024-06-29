@@ -10,7 +10,8 @@ import Footer from "./Footer";
 
 const ParallaxBg = () => {
   return (
-    <div className='wrapper'>
+    // <div className='wrapper_parallax_BG'>
+    <>
       <header>
       <img className='background_1' src={logoimg} alt="blood hero logo" />
       {/* <img className='background_1' src={logoimg} alt="blood hero logo" /> */}
@@ -32,7 +33,7 @@ const ParallaxBg = () => {
       <SliderSection />
       <Information />
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -258,7 +258,12 @@
   src: url("/src/assets/font/Comfortaa/Comfortaa-VariableFont_wght.ttf");
 }
 
-
+@media screen and (2179px <= width <= 2561px)
+{
+  .separator{
+    margin-top : 8px;
+  }
+}
 
    /* DONATE-REQUEST-goToMap BUTTONS */
   

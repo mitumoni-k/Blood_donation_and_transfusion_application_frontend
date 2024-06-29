@@ -33,6 +33,18 @@ body {
   overflow-x: hidden;
   perspective: 10px;
 }
+.wrapper_parallax_BG {
+  /* background:#FFE5B4; */
+  /* background: rgb(184, 233, 252); */
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
 
 .background_2 {
   color: beige;
@@ -58,7 +70,7 @@ header {
   grid-row-end: 4;
   grid-column-end: 2;
   transform: translatey(0px);
-  animation: float 5s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 @keyframes float {
   0% {
@@ -516,21 +528,8 @@ section {
   width: 4rem;
   margin: 35px 12px;
   margin-top: 22px;
-  transform: translatey(0px);
-  animation: float 5s ease-in-out infinite;
 }
 
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
 .login {
   background-color: rgb(153, 1, 1);
   color: white;
@@ -592,7 +591,7 @@ section {
     font-family: "mainfont";
     border-radius: 40px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     transition: transform 250ms;
   }
   .tagline {
@@ -601,7 +600,7 @@ section {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    margin-left: -68px;
+    margin-left: -73px;
     padding: 14px;
   }
   .leftmost-tagline {
@@ -625,28 +624,28 @@ section {
     grid-template-columns: 211px;
     justify-content: right;
     align-items: flex-start;
-    height: 30%;
+    height: 35%;
     transform-style: preserve-3d;
     z-index: -1;
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 44%;
-    left: -108px;
+    width: 40%;
+    left: -92px;
     object-fit: contain;
     z-index: -1;
+    margin-top: 8%;
+    margin-left: 130px;
+    padding-left: 57px;
+    /* animation: float 5s ease-in-out infinite; */
   }
-  .background_1 {
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
+
   .background_2 {
     width: 115%;
-    margin-top: -8rem;
-    margin-right: 8rem;
+    margin-top: 2rem;
+    margin-right: 9rem;
     font-family: "mainfont";
-    font-size: 31px;
+    font-size: 27px;
     position: fixed;
     background-image: linear-gradient(
       -225deg,
@@ -672,7 +671,7 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -199px;
+    margin-top: -4rem;
   }
   .content-title {
     opacity: 0;
@@ -680,7 +679,7 @@ section {
   .content-desc1 {
     font-size: 13px;
     margin-top: -91px;
-    margin-left: 179px;
+    margin-left: 157px;
     font-family: "mainfont";
     grid-column-start: 2;
     color: black;
@@ -691,7 +690,7 @@ section {
   }
   section {
     padding: 1rem;
-    height: 91%;
+    height: 103%;
   }
   .donate-request-gotomap {
     margin-top: 3rem;
@@ -727,7 +726,7 @@ section {
     color: blue;
     text-align: left;
     padding-left: 28px;
-    padding-right: 70px;
+    padding-right: 58px;
   }
   .about-us-section {
     font-family: serif;
@@ -854,24 +853,24 @@ section {
     font-family: "mainfont";
     border-radius: 40px;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 10px;
     transition: transform 250ms;
   }
   .signup {
     margin: 10px 5px;
   }
   .tagline {
-    margin-left: -74px;
+    margin-left: -72px;
     padding: 14px;
   }
   .leftmost-tagline {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
   }
   .left-tagline {
-    margin-left: -83px;
-    font-size: 14px;
-    margin-top: 38px;
+    margin-left: -64px;
+    font-size: 12px;
+    margin-top: 31px;
   }
   header {
     margin-top: 25px;
@@ -882,15 +881,15 @@ section {
     grid-template-columns: 211px;
     justify-content: right;
     align-items: flex-start;
-    height: 23%;
+    height: 28%;
     transform-style: preserve-3d;
     z-index: -1;
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 46%;
-    left: -93px;
+    margin-top: 6%;
+    width: 48%;
+    left: -80px;
     object-fit: contain;
     z-index: -1;
   }
@@ -899,7 +898,7 @@ section {
     animation: float 5s ease-in-out infinite;
   }
   .background_2 {
-    margin-top: -8rem;
+    margin-top: 0rem;
     margin-right: 155px;
     padding-left: 243px;
     font-size: 24px;
@@ -913,7 +912,7 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -199px;
+    margin-top: -74px;
   }
   .content-title {
     opacity: 0;
@@ -1132,8 +1131,8 @@ section {
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 46%;
+    margin-top: 7%;
+    width: 44%;
     left: -93px;
     object-fit: contain;
     z-index: -1;
@@ -1143,7 +1142,7 @@ section {
     animation: float 5s ease-in-out infinite;
   }
   .background_2 {
-    margin-top: -8rem;
+    margin-top: -3rem;
     margin-right: 155px;
     padding-left: 243px;
     font-size: 24px;
@@ -1157,7 +1156,7 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -199px;
+    margin-top: -116px;
   }
   .content-title {
     opacity: 0;
@@ -1380,15 +1379,15 @@ section {
     grid-template-columns: 211px;
     justify-content: right;
     align-items: flex-start;
-    height: 30%;
+    height: 44%;
     transform-style: preserve-3d;
     z-index: -1;
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
+    margin-top: 9%;
     width: 36%;
-    left: -108px;
+    left: -104px;
     object-fit: contain;
     z-index: -1;
     padding-left: 68px;
@@ -1397,7 +1396,7 @@ section {
 
   .background_2 {
     width: 115%;
-    margin-top: -6rem;
+    margin-top: 6rem;
     margin-right: 6rem;
     font-family: "mainfont";
     font-size: 34px;
@@ -1426,12 +1425,12 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -199px;
+    margin-top: -20px;
   }
   .content-title {
     font-size: 15px;
     margin-top: 115px;
-    margin-left: 196px;
+    margin-left: 212px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
@@ -1443,7 +1442,7 @@ section {
   .content-desc1 {
     font-size: 11px;
     margin-top: -27px;
-    margin-left: 201px;
+    margin-left: 209px;
     font-family: "mainfont";
     grid-column-start: 2;
     color: black;
@@ -1658,15 +1657,15 @@ section {
     grid-template-columns: 211px;
     justify-content: right;
     align-items: flex-start;
-    height: 36%;
+    height: 50%;
     transform-style: preserve-3d;
     z-index: -1;
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 29%;
-    left: -108px;
+    margin-top: 5%;
+    width: 31%;
+    left: -101px;
     object-fit: contain;
     z-index: -1;
     padding-left: 68px;
@@ -1675,8 +1674,8 @@ section {
 
   .background_2 {
     width: 115%;
-    margin-top: -2rem;
-    margin-right: 4rem;
+    margin-top: 11rem;
+    margin-right: 1rem;
     font-family: "mainfont";
     font-size: 37px;
     position: fixed;
@@ -1704,12 +1703,12 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -199px;
+    margin-top: -10px;
   }
   .content-title {
     font-size: 18px;
     margin-top: 161px;
-    margin-left: 220px;
+    margin-left: 281px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
@@ -1721,7 +1720,7 @@ section {
   .content-desc1 {
     font-size: 12px;
     margin-top: -27px;
-    margin-left: 220px;
+    margin-left: 283px;
     font-family: "mainfont";
     grid-column-start: 2;
     color: black;
@@ -1933,15 +1932,15 @@ section {
     grid-template-columns: 211px;
     justify-content: right;
     align-items: flex-start;
-    height: 52%;
+    height: 58%;
     transform-style: preserve-3d;
     z-index: -1;
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 25%;
-    left: -108px;
+    margin-top: 6%;
+    width: 26%;
+    left: -125px;
     object-fit: contain;
     z-index: -1;
     padding-left: 68px;
@@ -1949,9 +1948,8 @@ section {
   }
 
   .background_2 {
-    width: 115%;
-    margin-top: 5rem;
-    margin-right: -2.5rem;
+    margin-top: 13rem;
+    margin-right: 0.5rem;
     font-family: "mainfont";
     font-size: 55px;
     position: fixed;
@@ -1979,12 +1977,12 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: -38px;
+    margin-top: 75px;
   }
   .content-title {
     font-size: 22px;
     margin-top: 168px;
-    margin-left: 338px;
+    margin-left: 361px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
@@ -1996,7 +1994,7 @@ section {
   .content-desc1 {
     font-size: 16px;
     margin-top: -27px;
-    margin-left: 345px;
+    margin-left: 377px;
     font-family: "mainfont";
     grid-column-start: 2;
     color: black;
@@ -2216,9 +2214,9 @@ section {
   }
   .background_1 {
     position: relative;
-    margin-top: 3%;
-    width: 32%;
-    left: -17rem;
+    margin-top: 5%;
+    width: 31%;
+    left: -15rem;
     object-fit: contain;
     z-index: -1;
     padding-left: 68px;
@@ -2227,10 +2225,10 @@ section {
 
   .background_2 {
     width: 115%;
-    margin-top: 18rem;
+    margin-top: 21rem;
     margin-right: -5.5rem;
     font-family: "mainfont";
-    font-size: 97px;
+    font-size: 86px;
     position: fixed;
     background-image: linear-gradient(
       -225deg,
@@ -2256,12 +2254,12 @@ section {
     grid-column-end: 3;
     letter-spacing: 1px;
     padding-left: -17px;
-    margin-top: 16rem;
+    margin-top: 19rem;
   }
   .content-title {
     font-size: 35px;
     margin-top: 168px;
-    margin-left: 362px;
+    margin-left: 344px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
@@ -2273,13 +2271,304 @@ section {
   .content-desc1 {
     font-size: 23px;
     margin-top: -27px;
-    margin-left: 391px;
+    margin-left: 349px;
     font-family: "mainfont";
     grid-column-start: 2;
     color: black;
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 11px;
+  }
+  section {
+    padding: 1rem;
+    height: 34rem;
+  }
+  .donate-request-gotomap {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-family: "mainfont";
+  }
+  .go-to-map-button {
+    background-color: forestgreen;
+    padding: 15px 30px;
+    padding-bottom: 14px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .donate-request-gotomap:hover {
+    border: 2px solid white;
+  }
+  .go-to-map-button a {
+    font-size: 24px;
+    color: #fff;
+  }
+  .search-icon-gotomap {
+    margin-bottom: 1px;
+    margin-left: 8px;
+    font-size: 19px;
+  }
+  .about-us {
+    padding-top: 25px;
+    font-family: "mainfont";
+    font-size: 30px;
+    color: blue;
+    text-align: left;
+    padding-left: 66px;
+    padding-right: 70px;
+  }
+  .about-us-section {
+    font-family: serif;
+    color: black;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 111px;
+    padding-right: 109px;
+    margin-bottom: 7px;
+  }
+  .website-brochure-button {
+    padding: 9px 20px;
+    font-family: cursive;
+    font-size: 16px;
+  }
+  .website-brochure-button:hover {
+    text-decoration: underline;
+  }
+  .funFacts h3 {
+    font-size: 54px;
+    margin-bottom: 43px;
+  }
+  .DYK-slider img {
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    width: 19rem;
+    height: 19rem;
+  }
+  .information-heading {
+    font-size: 52px;
+    margin-top: 7rem;
+  }
+  .stats {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .no_of_users {
+    height: 142px;
+    width: 327px;
+  }
+  .no_of_users h3 {
+    margin-top: 34px;
+    margin-bottom: 39px;
+    font-size: 21px;
+  }
+  .no_of_users p {
+    margin-top: -14px;
+    font-size: 20px;
+  }
+  .l_of_blood {
+    height: 142px;
+    width: 329px;
+    font-size: 20px;
+  }
+  .l_of_blood h3 {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .footer-icons {
+    margin-left: auto;
+  }
+  .footer-icons li a {
+    margin: auto 23px;
+    font-size: 32px;
+  }
+  .footer-nav li {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 14px;
+  }
+  .footer-nav li a {
+    font-size: 18px;
+    margin: auto 31px;
+  }
+  .footer-feedback {
+    margin-top: 22px;
+  }
+  .footer-feedback-input {
+    height: 26px;
+    width: 224px;
+    margin: auto auto;
+    font-size: 11px;
+  }
+  .footer-feedback-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 72px;
+    font-size: 11px;
+    margin-left: 11rem;
+  }
+  .footer-desc {
+    font-size: 12px;
+    bottom: -129px;
+    position: relative;
+    margin: auto;
+  }
+  .footer {
+    height: 220px;
+  }
+  .footer-rights-reserved {
+    display: flex;
+    position: initial;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem auto;
+    font-size: 13px;
+  }
+  .footer-separator {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (1399px <= width <= 1441px){
+  .background_1{
+    margin-top: 0%;
+    width: 31%;
+    left: -16rem;
+  }
+}
+@media screen and (1441px <= width <= 2561px) {
+  .logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 35px 12px;
+    margin-top: 22px;
+  }
+  .signup,
+  .login {
+    background-color: rgb(153, 1, 1);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin: auto 5px;
+    padding: 8px 32px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    transition: transform 250ms;
+  }
+  .tagline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: -68px;
+    padding: 14px;
+  }
+  .leftmost-tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 3px;
+  }
+  .left-tagline {
+    margin-left: -83px;
+    font-size: 22px;
+    margin-top: 45px;
+  }
+  header {
+    margin-top: 25px;
+    margin-bottom: 55px;
+    position: relative;
+    display: flex;
+    grid-template-rows: 500px -2px 40px 40px 40px;
+    grid-template-columns: 211px;
+    justify-content: right;
+    align-items: flex-start;
+    height: 78%;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+  .background_1 {
+    opacity: 1;
+    position: relative;
+    margin-top: 3%;
+    width: 32%;
+    left: -17rem;
+    object-fit: contain;
+    z-index: 1;
+    padding-left: 68px;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .background_2 {
+    width: 115%;
+    margin-top: 30rem;
+    margin-right: -9.5rem;
+    font-family: "mainfont";
+    font-size: 97px;
+    position: fixed;
+    background-image: linear-gradient(
+      -225deg,
+      #fcf006 0%,
+      #ff0000 29%,
+      #b54141 67%,
+      rgb(68, 4, 4) 100%
+    );
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 6s linear infinite;
+    display: inline-block;
+    z-index: 1;
+  }
+  .background_writting {
+    font-size: -55rem;
+    color: black;
+    text-shadow: 0 0 5px beige;
+    font-family: "mainfont";
+    grid-row-end: 6;
+    grid-column-end: 3;
+    letter-spacing: 1px;
+    padding-left: -17px;
+    margin-top: 28rem;
+    z-index: 1;
+  }
+  .content-title {
+    font-size: 35px;
+    margin-top: 168px;
+    margin-left: 416px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    grid-column-start: 1;
+    color: black;
+    font-weight: bold;
+    padding: 11px;
+    z-index: 1;
+  }
+  .content-desc1 {
+    font-size: 23px;
+    margin-top: -27px;
+    margin-left: 421px;
+    font-family: "mainfont";
+    grid-column-start: 2;
+    color: black;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    gap: 13px;
     padding: 11px;
   }
   section {
@@ -2437,286 +2726,66 @@ section {
     margin-top: 18px;
   }
 }
-@media screen and (1441px <= width <= 2561px) {
-  .logo {
-    height: 3.5rem;
-    width: 3.5rem;
-    margin: 35px 12px;
-    margin-top: 22px;
-  }
-  .signup,
-  .login {
-    background-color: rgb(153, 1, 1);
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    margin: auto 5px;
-    padding: 8px 32px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    border-radius: 40px;
-    font-weight: bold;
-    font-size: 24px;
-    transition: transform 250ms;
-  }
-  .tagline {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-left: -68px;
-    padding: 14px;
-  }
-  .leftmost-tagline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    margin-top: 3px;
-  }
-  .left-tagline {
-    margin-left: -83px;
-    font-size: 22px;
-    margin-top: 45px;
-  }
-  header {
-    margin-top: 25px;
-    margin-bottom: 55px;
-    position: relative;
-    display: flex;
-    grid-template-rows: 500px -2px 40px 40px 40px;
-    grid-template-columns: 211px;
-    justify-content: right;
-    align-items: flex-start;
-    height: 78%;
-    transform-style: preserve-3d;
-    z-index: -1;
-  }
-  .background_1 {
-    opacity: 1;
-    position: relative;
-    margin-top: 3%;
-    width: 32%;
-    left: -17rem;
-    object-fit: contain;
-    z-index: 1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
 
-  .background_2 {
-    width: 115%;
-    margin-top: 18rem;
-    margin-right: -5.5rem;
-    font-family: "mainfont";
-    font-size: 97px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-    z-index: 1;
+@media screen and (2179px <= width <= 2561px)
+{
+  .content-desc1{
+    font-size: 40px;
+    margin-top: -15px;
+    margin-left: 55rem;
+    gap: 16px;
   }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: 16rem;
-    z-index: 1;
-  }
-  .content-title {
-    font-size: 35px;
+  .content-title{
+    font-size: 60px;
     margin-top: 168px;
-    margin-left: 362px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-    z-index: 1;
+    margin-left: 54rem;
   }
-  .content-desc1 {
-    font-size: 23px;
-    margin-top: -27px;
-    margin-left: 391px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    z-index: 1;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
+  .background_writting{
+    margin-top: 48rem;
   }
-  section {
-    padding: 1rem;
-    height: 28rem;
+  .background_2{
+    margin-top: 48rem;
+    margin-right: -23.5rem;
+    font-size: 125px;
   }
-  .donate-request-gotomap {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    font-family: "mainfont";
+  .background_1{
+    margin-top: 3%;
+    width: 23%;
+    left: -17rem;
   }
-  .go-to-map-button {
-    background-color: forestgreen;
-    padding: 15px 30px;
-    padding-bottom: 14px;
-    border-radius: 100px;
-    cursor: pointer;
+  .logo{
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-top: 38px;
   }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
-  }
-  .go-to-map-button a {
-    font-size: 24px;
-    color: #fff;
-  }
-  .search-icon-gotomap {
-    margin-bottom: 1px;
-    margin-left: 8px;
-    font-size: 19px;
-  }
-  .about-us {
-    padding-top: 25px;
-    font-family: "mainfont";
-    font-size: 30px;
-    color: blue;
-    text-align: left;
-    padding-left: 66px;
-    padding-right: 70px;
-  }
-  .about-us-section {
-    font-family: serif;
-    color: black;
-    font-size: 24px;
-    text-align: left;
-    padding-left: 111px;
-    padding-right: 109px;
-    margin-bottom: 7px;
-  }
-  .website-brochure-button {
-    padding: 9px 20px;
-    font-family: cursive;
-    font-size: 16px;
-  }
-  .website-brochure-button:hover {
-    text-decoration: underline;
-  }
-  .funFacts h3 {
-    font-size: 54px;
-    margin-bottom: 43px;
-  }
-  .DYK-slider img {
-    border-radius: 25px;
-    display: flex;
-    overflow: hidden;
-    width: 19rem;
-    height: 19rem;
-  }
-  .information-heading {
-    font-size: 52px;
-    margin-top: 7rem;
-  }
-  .stats {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .no_of_users {
-    height: 142px;
-    width: 327px;
-  }
-  .no_of_users h3 {
-    margin-top: 34px;
-    margin-bottom: 39px;
-    font-size: 21px;
-  }
-  .no_of_users p {
-    margin-top: -14px;
-    font-size: 20px;
-  }
-  .l_of_blood {
-    height: 142px;
-    width: 329px;
-    font-size: 20px;
-  }
-  .l_of_blood h3 {
-    margin-top: 35px;
-    margin-bottom: 30px;
-    font-size: 20px;
-  }
-  .footer-icons {
-    margin-left: auto;
-  }
-  .footer-icons li a {
-    margin: auto 23px;
+  .leftmost-tagline{
     font-size: 32px;
   }
-  .footer-nav li {
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-top: 14px;
+  .left-tagline{
+    font-size: 32px;
+    margin-top: 66px;
   }
-  .footer-nav li a {
-    font-size: 18px;
-    margin: auto 31px;
+  .signup{
+    margin-top: 1rem;
   }
-  .footer-feedback {
-    margin-top: 22px;
+  .background_2{
+    margin-top: 26rem;
+    margin-right: -8.5rem ;
   }
-  .footer-feedback-input {
-    height: 26px;
-    width: 224px;
-    margin: auto auto;
-    font-size: 11px;
+  .background_writting{
+    margin-top: 24rem;
   }
-  .footer-feedback-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 28px;
-    width: 72px;
-    font-size: 11px;
-    margin-left: 11rem;
+  .content-title{
+    margin-left: 34rem;
   }
-  .footer-desc {
-    font-size: 12px;
-    bottom: -129px;
-    position: relative;
-    margin: auto;
+  .content-desc1{
+    margin-left: 35rem;
   }
-  .footer {
-    height: 220px;
-  }
-  .footer-rights-reserved {
-    display: flex;
-    position: initial;
-    justify-content: center;
-    align-items: center;
-    margin: 8rem auto;
-    font-size: 13px;
-  }
-  .footer-separator {
-    margin-top: 18px;
+}
+
+@media screen and (769px <= width <= 850px)
+{
+  .background_1{
+    width: 35%;
   }
 }
