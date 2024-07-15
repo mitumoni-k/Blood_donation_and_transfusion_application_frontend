@@ -49,6 +49,8 @@ const MyProfile = () => {
     return null;
   }
 
+  const token = getCookieValue('token')
+
   useEffect(() => {
     // fetching role profile from Backend
     const fetchProfile = async () => {
