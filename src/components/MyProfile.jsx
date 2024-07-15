@@ -189,7 +189,7 @@ const MyProfile = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -229,7 +229,7 @@ const MyProfile = () => {
         "http://localhost:8080/api/v1/auth/showinventory",
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -274,7 +274,7 @@ const MyProfile = () => {
         updatedData,
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -316,7 +316,7 @@ const MyProfile = () => {
         `http://localhost:8080/api/v1/auth/inventory/${registrationId}/${bloodUnitId}`,
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -356,7 +356,7 @@ const MyProfile = () => {
         "http://localhost:8080/api/v1/auth/requesthistory",
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -366,7 +366,7 @@ const MyProfile = () => {
           "http://localhost:8080/api/v1/auth/donatehistory",
           {
             headers: {
-              Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+              Authorization: `Bearer ${token}`,
             },
           }
         );
