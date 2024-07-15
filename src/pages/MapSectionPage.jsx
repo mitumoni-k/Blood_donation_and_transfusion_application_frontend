@@ -20,7 +20,6 @@ export default function MapSectionPage({authorized,userRole}) {
         theme="colored"
         transition={Bounce}
       />
-      <Footer />
     </div>
   );
 }

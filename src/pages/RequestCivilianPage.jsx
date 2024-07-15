@@ -1,11 +1,11 @@
 import RequestCivilian from "../components/ReqCivilian";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-export default function RequestCivilianPage(){
+export default function RequestCivilianPage({decodedToken}){
     return (
         <div>
             <Navbar />
-            <RequestCivilian />
+            <RequestCivilian decodedToken={decodedToken} />
             <Footer />
         </div>
         

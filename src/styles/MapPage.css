@@ -1,7 +1,12 @@
 .map-page {
   width: 100%;
-  overflow: hidden;
+  height : 44rem;
+  /* overflow: hidden; */
   display: flex;
+}
+
+.leaflet-container{
+  height: 44rem ;
 }
 
 .map-section {

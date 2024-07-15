@@ -38,12 +38,26 @@ const MyProfile = () => {
 
   const navigate = useNavigate();
 
+  function getCookieValue(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
   useEffect(() => {
     // fetching role profile from Backend
     const fetchProfile = async () => {
       try {
-        const token = document.cookie.split("=")[1];
+        // const token = document.cookie.split("=")[1]
+        const token = getCookieValue('token')
+        console.log("TOKEN = ",token)
         const decodedToken = jwtDecode(token);
+        console.log("TOKEN from MYProfile Component = ", token);
         const { role } = decodedToken;
         const response = await axios.get(
           "http://localhost:8080/api/v1/auth/myprofile",
@@ -53,6 +67,7 @@ const MyProfile = () => {
             },
           }
         );
+        console.log("Profile Response : ", response.data);
         const { Name, email, joined_Date, phoneno, registrationId, address } =
           response.data.userProfile;
         setName(Name);
@@ -68,7 +83,7 @@ const MyProfile = () => {
     };
 
     fetchProfile();
-  },[]);
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -105,7 +120,7 @@ const MyProfile = () => {
       const token = document.cookie.split("=")[1];
       const decodedToken = jwtDecode(token);
       const { role, userId } = decodedToken;
-      
+
       const updatedProfile = {
         Name,
         email,
@@ -155,7 +170,6 @@ const MyProfile = () => {
       });
     }
   };
-
 
   // ADD IMAGE HANDLER
   const handleAddImage = () => {

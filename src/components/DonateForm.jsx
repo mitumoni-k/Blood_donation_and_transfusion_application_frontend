@@ -8,7 +8,7 @@ import axios from 'axios';
 import { toast , Bounce } from "react-toastify";
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const DonateForm = () => {
+const DonateForm = ({decodedToken}) => {
   let navigate = useNavigate();
   let stateLocation = useLocation();
 
@@ -27,16 +27,10 @@ const DonateForm = () => {
 
   useEffect(() => {
     // Function to decode token and extract userId
-    const decodeToken = () => {
-      const token = document.cookie.split("=")[1]; 
-      const decodedToken = jwtDecode(token); 
-      console.log(decodedToken);
       const decodedRole = decodedToken.role;
       const decodedUserId = decodedToken.userId;
       setUserId(decodedUserId);
       setRole(decodedRole);       
-    };
-    decodeToken(); 
     console.log("Location for donate : " ,stateLocation.state)
     if (stateLocation.state && stateLocation.state.hospitalData) {
       setBloodType(stateLocation.state.hospitalData.Blood_Type);

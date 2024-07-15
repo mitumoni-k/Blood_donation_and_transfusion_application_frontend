@@ -19,20 +19,34 @@ import RequestCivilianPage from "./pages/RequestCivilianPage";
 function App() {
   const [token, setToken] = useState(null);
   const [fcmToken, setFcmToken] = useState(null);
+  const [decodedToken, setDecodedToken] = useState(null)
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState(null);
 
+  function getCookieValue(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
   //checking if token exists
   useEffect(() => {
-    const tokenCookie = document.cookie
-      .split(";")
-      .find((cookie) => cookie.trim().startsWith("token="));
-    if (tokenCookie) {
+    // const tokenCookie = document.cookie
+    //   .split(";")
+    //   .find((cookie) => cookie.trim().startsWith("token="));
+    const token = getCookieValue('token')
+    if (token) {
       setIsLoggedIn(true); // Set isLoggedIn to true if token exists
-      const token = tokenCookie.split("=")[1];
+      // const token = tokenCookie.split("=")[1];
       setToken(token); // Extract token value from cookie
       try {
         const decodedToken = jwtDecode(token);
+        setDecodedToken(decodedToken)
         console.log("decodedToken", decodedToken);
         const { role } = decodedToken;
         setUserRole(role);
@@ -106,7 +120,7 @@ function App() {
           <Route path="/myprofile" element={<MyProfilepage />} />
 
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/request" element={<RequestCivilianPage />} />
+          <Route path="/request" element={<RequestCivilianPage decodedToken={decodedToken} />}  />
 
           <Route
             path="/login"
@@ -122,9 +136,9 @@ function App() {
             }
           />
 
-          <Route path="/donateform" element={<DonateForm />} />
+          <Route path="/donateform" element={<DonateForm decodedToken={decodedToken}/>} />
 
-          <Route path="/requestform" element={<RequestForm />} />
+          <Route path="/requestform" element={<RequestForm decodedToken={decodedToken}/>} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" />

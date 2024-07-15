@@ -4,14 +4,14 @@ import "../styles/DonateRequestForm.css";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import imageSrc from "../assets/LoginSignupImg.png";
-import { toast , Bounce } from "react-toastify";
-import { useNavigate , useLocation } from "react-router-dom";
+import { toast, Bounce } from "react-toastify";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const RequestForm = (props) => {
-  let navigate = useNavigate()
-  let stateLocation = useLocation()  // to collect and use the data send from other page , here map page
+const RequestForm = ({decodedToken}) => {
+  let navigate = useNavigate();
+  let stateLocation = useLocation(); // to collect and use the data send from other page , here map page
   // State variables for form inputs
-  const [requestedBody, setRequestedBody] = useState(" ")
+  const [requestedBody, setRequestedBody] = useState(" ");
   const [role, setRole] = useState(" ");
   const [userId, setuserId] = useState(" ");
   const [registrationId, setRegistrationId] = useState("");
@@ -23,20 +23,14 @@ const RequestForm = (props) => {
 
   useEffect(() => {
     // Function to decode token and extract role
-    const decodeToken = () => {
-      const token = document.cookie.split("=")[1];
-      const decodedToken = jwtDecode(token);
-      console.log(decodedToken);
       const decodedRole = decodedToken.role;
       const decodedUserId = decodedToken.userId;
       setuserId(decodedUserId);
       setRole(decodedRole);
-    };
-    decodeToken();
-    console.log("Location in request : " ,stateLocation.state)
+    console.log("Location in request : ", stateLocation.state);
     if (stateLocation.state && stateLocation.state.hospitalData) {
       setBloodType(stateLocation.state.hospitalData.Blood_Type);
-      setRequestedBody(stateLocation.state.hospitalData.Name)
+      setRequestedBody(stateLocation.state.hospitalData.Name);
     }
   }, []);
 
@@ -81,20 +75,20 @@ const RequestForm = (props) => {
         }
       );
 
-      successfulSubmission()
+      successfulSubmission();
     } catch (error) {
       console.log(error);
-      toast.error('Request failed' , {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-            transition: Bounce,
-      })
+      toast.error("Request failed", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
       console.error(
         "Request failed:",
         error.response ? error.response.data : error.message
@@ -103,40 +97,44 @@ const RequestForm = (props) => {
   };
 
   const successfulSubmission = () => {
-    navigate('/map', {state: { message : `Request sent to ${stateLocation.state.hospitalData.Name}`} });
-        setTimeout(() => {
-          toast.success(" Data submitted Successful!! ", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-            transition: Bounce,
-          })
-        }, 1000);
-      
-    }
+    navigate("/map", {
+      state: {
+        message: `Request sent to ${stateLocation.state.hospitalData.Name}`,
+      },
+    });
+    setTimeout(() => {
+      toast.success(" Data submitted Successful!! ", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+    }, 1000);
+  };
 
- 
   return (
     <div className="request-donate-container">
       <div className="request-donate-form-container">
         <img src={imageSrc} alt="Image" className="request-donate-form-img" />
         <h2 className="request-donate-form-title">Blood Request Form</h2>
         <form onSubmit={handleSubmit} className="request-donate-form">
-            <div className="field">
-                <label className="request-donate-form-label">
-                  Request to :
-                </label>
-                <div className="hospital-name-on-request-form">{stateLocation.state.hospitalData.Name}</div>
-                </div>
-              <div className="field">
-                <label className="request-donate-form-label">Blood Type:</label>
-                <div className="hospital-name-on-request-form">{stateLocation.state.hospitalData.Blood_Type}</div>
-                </div>
+          <div className="field">
+            <label className="request-donate-form-label">Request to :</label>
+            <div className="hospital-name-on-request-form">
+              {stateLocation.state.hospitalData.Name}
+            </div>
+          </div>
+          <div className="field">
+            <label className="request-donate-form-label">Blood Type:</label>
+            <div className="hospital-name-on-request-form">
+              {stateLocation.state.hospitalData.Blood_Type}
+            </div>
+          </div>
           {role === "user" && (
             <>
               <div className="field">
