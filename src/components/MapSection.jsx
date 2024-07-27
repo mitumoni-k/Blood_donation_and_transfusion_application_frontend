@@ -298,7 +298,6 @@ const MapSection = ({ authorized, userRole }) => {
             center={userLocation || [28.6139, 77.2088]}
             zoom={zoomLevel}
             scrollWheelZoom={false}
-            style={{ height: "44rem", width: "100%" }}
             ref={mapRef}
           >
             <TileLayer

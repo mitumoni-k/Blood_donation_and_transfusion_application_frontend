@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { ToastContainer, Bounce } from "react-toastify";
 export default function MapSectionPage({authorized,userRole}) {
   return (
-    <div>
+    <div className="wrapper">
       <Navbar />
       <MapSection authorized={authorized} userRole={userRole}  />
       <ToastContainer
@@ -20,6 +20,7 @@ export default function MapSectionPage({authorized,userRole}) {
         theme="colored"
         transition={Bounce}
       />
+      <Footer />
     </div>
   );
 }
