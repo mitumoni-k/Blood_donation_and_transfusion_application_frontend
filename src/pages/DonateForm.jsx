@@ -1,9 +1,11 @@
 import DonateForm from "../components/DonateForm";
 import Footer from "../components/Footer"
-export default function DonatePage({decodedToken}){
+import Navbar from "../components/Navbar";
+export default function DonatePage({token, decodedToken}){
     return (
-        <div>
-            <DonateForm decodedToken={decodedToken}/>
+        <div className="wrapper">
+            <Navbar />
+            <DonateForm token={token} decodedToken={decodedToken}/>
             <Footer />
 
         </div>

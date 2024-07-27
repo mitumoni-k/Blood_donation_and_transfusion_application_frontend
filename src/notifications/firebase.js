@@ -18,12 +18,10 @@ const messaging = getMessaging(app);
 export const generateToken = async () => {
   try {
     const permission = await Notification.requestPermission();
-    console.log("Permission : ", permission);
     if (permission === "granted") {
       const token = await getToken(messaging, {
         vapidKey: process.env.REACT_APP_VAPID_KEY,
       });
-      console.log("FCM TOKENNNNN from firebase.js file : ", token);
       return token;
     }
   } catch (error) {

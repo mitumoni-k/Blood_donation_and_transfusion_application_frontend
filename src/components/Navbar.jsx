@@ -12,9 +12,7 @@ const Navbar = () => {
     const tokenCookie = document.cookie
       .split(";")
       .find((cookie) => cookie.trim().startsWith("token="));
-    console.log("Token Cookie : ", tokenCookie);
     setIsLoggedIn(!!tokenCookie);
-    console.log("isLoggedIn : ", isLoggedIn);
   }, []);
 
   const handleLogout = () => {

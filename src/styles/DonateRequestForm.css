@@ -27,6 +27,7 @@
 .request-donate-form {
   display: flex;
   flex-direction: column;
+  text-align : left;
 }
 
 .request-donate-form-label {
@@ -35,6 +36,7 @@
 
 .request-donate-form-input,
 .request-donate-form-select {
+  flex : 1;
   width: 100%; 
   padding: 10px; 
   margin-bottom: 15px;
@@ -66,4 +68,23 @@
   margin: auto;
   width: 90px; 
   height: 80px;  
+}
+
+@media screen and (max-width: 600px) {
+  .request-donate-container {
+    height: auto;
+  }
+
+  .request-donate-form-container {
+    margin: 30px;
+  }
+
+  .request-donate-form-title {
+    font-size: 20px;
+  }
+
+  .request-donate-form-img {
+    width: 60px;
+    height: 55px;
+  }
 }

@@ -7,7 +7,7 @@ import imageSrc from "../assets/LoginSignupImg.png";
 import { toast, Bounce } from "react-toastify";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const RequestForm = ({decodedToken}) => {
+const RequestForm = ({token, decodedToken}) => {
   let navigate = useNavigate();
   let stateLocation = useLocation(); // to collect and use the data send from other page , here map page
   // State variables for form inputs
@@ -70,7 +70,7 @@ const RequestForm = ({decodedToken}) => {
         },
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );

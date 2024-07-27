@@ -57,9 +57,9 @@ const MyProfile = () => {
       try {
         // const token = document.cookie.split("=")[1]
         const token = getCookieValue('token')
-        console.log("TOKEN = ",token)
+
         const decodedToken = jwtDecode(token);
-        console.log("TOKEN from MYProfile Component = ", token);
+
         const { role } = decodedToken;
         const response = await axios.get(
           "http://localhost:8080/api/v1/auth/myprofile",

@@ -33,8 +33,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run generate-config && react-scripts start",
+    "generate-config": "node generate-firebase-config.js",
+    "build": "npm run generate-config && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

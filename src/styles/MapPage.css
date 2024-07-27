@@ -90,6 +90,7 @@
 .map-search-results {
   max-height: 600px;
   overflow-y: auto;
+  text-align : left;
 }
 
 .map-search-result {

@@ -47,7 +47,6 @@ function App() {
       try {
         const decodedToken = jwtDecode(token);
         setDecodedToken(decodedToken)
-        console.log("decodedToken", decodedToken);
         const { role } = decodedToken;
         setUserRole(role);
       } catch (error) {
@@ -85,8 +84,6 @@ function App() {
     });
   }, []);
 
-  console.log("logged in: ", isLoggedIn);
-  console.log("FCM TOKEN = ", fcmToken);
 
   const updateFcmToken = async (decodedToken, fcmToken) => {
     const userId = decodedToken.userId || decodedToken.registrationId;
@@ -120,7 +117,7 @@ function App() {
           <Route path="/myprofile" element={<MyProfilepage />} />
 
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/request" element={<RequestCivilianPage decodedToken={decodedToken} />}  />
+          <Route path="/request" element={<RequestCivilianPage token={token} decodedToken={decodedToken}/>}  />
 
           <Route
             path="/login"
@@ -136,9 +133,9 @@ function App() {
             }
           />
 
-          <Route path="/donateform" element={<DonateForm decodedToken={decodedToken}/>} />
+          <Route path="/donateform" element={<DonateForm token={token} decodedToken={decodedToken}/>} />
 
-          <Route path="/requestform" element={<RequestForm decodedToken={decodedToken}/>} />
+          <Route path="/requestform" element={<RequestForm token={token} decodedToken={decodedToken}/>} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" />

@@ -8,7 +8,7 @@ import axios from 'axios';
 import { toast , Bounce } from "react-toastify";
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const DonateForm = ({decodedToken}) => {
+const DonateForm = ({token,decodedToken}) => {
   let navigate = useNavigate();
   let stateLocation = useLocation();
 
@@ -87,7 +87,7 @@ const DonateForm = ({decodedToken}) => {
         },
         {
           headers: {
-            Authorization: `Bearer ${document.cookie.split("=")[1]}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
