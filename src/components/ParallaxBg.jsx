@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useState , useEffect } from "react";
 import "../styles/Parallax.css";
 import "../styles/MainPage.css";
 import logoimg from "../assets/LoginSignupImg.png";
@@ -7,25 +7,44 @@ import DonateRequestIcons from "./DonateRequestIcons";
 import SliderSection from "./SliderSection";
 import Information from "./Information";
 import Footer from "./Footer";
+import axios from "axios";
 
 const ParallaxBg = () => {
+
+  const [imageUrl , setImageUrl] = useState('');
+
+  useEffect(() => {
+    // Fetching images from Unsplash API
+    axios
+      .get('https://api.unsplash.com/photos/random', {
+        params: { query: 'Medical blood donation' },
+        headers: {
+          Authorization: 'Client-ID RZjwvWGZcce61eOQgDSyO8r0u1uW0-cfZ3vfxcUyfRM',
+        },
+      })
+      .then((response) => {
+        setImageUrl(response.data.urls.regular);
+      })
+      .catch((error) => {
+        console.error('Error fetching image from Unsplash API:', error);
+      });
+  }, []);
+
+
   return (
-    // <div className='wrapper_parallax_BG'>
     <>
       <header>
-        <img className="background_1" src={logoimg} alt="blood hero logo" />
-        {/* <img className='background_1' src={logoimg} alt="blood hero logo" /> */}
-        <h1 className="background_2">
-          Blood<br></br> Hero{" "}
-        </h1>
-        <div className="background_writting">
-          <h1 className="content-title">
-            Transfuse or Donate - <span className="ploo">Blood</span>
-          </h1>
-          <h4 className="content-desc1">
-            Empowering Lives,<span>One Drop at a Time</span>
-          </h4>
-        </div>
+      <div className="landing-page">
+      <div className="left-section">
+        {imageUrl && <img src={imageUrl} alt="Blood Donation" />}
+      </div>
+      <div className="right-section">
+        <h1>Blood Hero</h1>
+        <h2>Transfuse or Donate - <span>Blood</span></h2>
+        <p>Empowering Lives, One Drop at a Time</p>
+        <button className="donatenow-button">DONATE NOW</button>
+      </div>
+    </div>
       </header>
       <section>
         <DonateRequestIcons />

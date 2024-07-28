@@ -8,13 +8,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* html, body {
-    margin:0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; 
-  } */
+
 
 body {
   overflow: hidden;
@@ -22,8 +16,7 @@ body {
 }
 
 .wrapper {
-  /* background:#FFE5B4; */
-  /* background: rgb(184, 233, 252); */
+
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -34,8 +27,7 @@ body {
   perspective: 10px;
 }
 .wrapper_parallax_BG {
-  /* background:#FFE5B4; */
-  /* background: rgb(184, 233, 252); */
+
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -46,10 +38,7 @@ body {
   perspective: 10px;
 }
 
-.background_2 {
-  color: beige;
-  font-family: "mainfont";
-}
+
 header {
   margin-top: 30px;
   position: relative;
@@ -62,86 +51,7 @@ header {
   transform-style: preserve-3d;
   z-index: -1;
 }
-.background_1 {
-  margin-top: 50px;
-  /* padding-left: 10px; */
-  grid-row-start: 1;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  grid-column-end: 2;
-  transform: translatey(0px);
-  animation: float 4s ease-in-out infinite;
-}
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-40px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-.background_1,
-.background_2,
-.background_writting {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  z-index: -1;
-}
-.background_1,
-.background_2 {
-  transform: translateZ(-10px) scale(2);
-}
-.background_writting {
-  transform: translateZ(-10px) scale(1.5);
-}
-.background_writting {
-  font-size: 7rem;
-  color: black;
-  text-shadow: 0 0 5px beige;
-  font-family: "mainfont";
-  grid-row-start: 1;
-  grid-column-start: 2;
-  grid-row-end: 2;
-  grid-column-end: 3;
-  letter-spacing: 1px;
-  padding-left: 15px;
-  margin-top: 1420px;
-}
-.background_2 {
-  padding-left: 300px;
-  margin-top: 600px;
-  font-family: "mainfont";
-  color: black;
-  font-size: 8rem;
-  position: fixed;
-  background-image: linear-gradient(
-    -225deg,
-    #fcf006 0%,
-    #ff0000 29%,
-    #b54141 67%,
-    rgb(68, 4, 4) 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 6s linear infinite;
-  display: inline-block;
-}
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
 section {
   font-size: 2rem;
   padding: 4rem;
@@ -249,18 +159,8 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* animation: change 50s infinite ease; */
   filter: blur(3px);
 }
-
-/* .slideshow-section::before{
-    content : " ";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 88vh;
-    background: rgba(0,0,0,0.4);
-  } */
 
 /* FOOTER */
 .footer {
@@ -570,6 +470,11 @@ section {
   padding-left: 10px;
 }
 
+.go-to-map-button a:hover {
+  font-size: 22px;
+  color: #cdcdcd;
+}
+
 /* **************RESPONSIVENESS**************** */
 /* MOBILE-L SIZE */
 @media screen and (375px <= width <= 431px) {
@@ -616,8 +521,6 @@ section {
     margin-top: 38px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -628,66 +531,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    position: relative;
-    width: 44%;
-    left: -92px;
-    object-fit: contain;
-    z-index: -1;
-    margin-top: 8%;
-    margin-left: 130px;
-    padding-left: 57px;
-    /* animation: float 5s ease-in-out infinite; */
-  }
 
-  .background_2 {
-    width: 115%;
-    margin-top: 2rem;
-    margin-right: 9rem;
-    font-family: "mainfont";
-    font-size: 27px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: -4rem;
-  }
-  .content-title {
-    opacity: 0;
-  }
-  .content-desc1 {
-    font-size: 13px;
-    margin-top: -91px;
-    margin-left: 157px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
-  }
   section {
     padding: 1rem;
     height: 103%;
@@ -707,9 +551,7 @@ section {
     border-radius: 100px;
     cursor: pointer;
   }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
-  }
+
   .go-to-map-button a {
     font-size: 20px;
     color: #fff;
@@ -837,10 +679,142 @@ section {
   .footer-separator {
     margin-top: 24px;
   }
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h1 {
+    font-size: 25px;
+  }
+
+  .right-section h2 {
+    font-size: 13px;
+    text-align: left;
+    color: white;
+    margin-top: -5px;
+  }
+
+  .right-section p {
+    font-size: 10px;
+    margin-top: -3px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-top: 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 4px;
+    font-size: 6px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
 }
 
 /* MOBILE-M size */
 @media screen and (320px <= width <= 331px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h1 {
+    font-size: 21px;
+  }
+
+  .right-section h2 {
+    font-size: 12px;
+    text-align: left;
+    color: white;
+    margin-top: -5px;
+  }
+
+  .right-section p {
+    font-size: 9px;
+    margin-top: -3px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 4px;
+    font-size: 5px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+
   .logo {
     height: 2.5rem;
     width: 2.5rem;
@@ -873,8 +847,6 @@ section {
     margin-top: 31px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -885,50 +857,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    position: relative;
-    margin-top: 6%;
-    width: 48%;
-    left: -80px;
-    object-fit: contain;
-    z-index: -1;
-  }
-  .background_1 {
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
-  .background_2 {
-    margin-top: 0rem;
-    margin-right: 155px;
-    padding-left: 243px;
-    font-size: 24px;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: -74px;
-  }
-  .content-title {
-    opacity: 0;
-  }
-  .content-desc1 {
-    font-size: 13px;
-    margin-top: -176px;
-    margin-left: 106px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
-  }
+
   section {
     padding: 1rem;
     height: 77%;
@@ -947,9 +876,6 @@ section {
     padding-bottom: 14px;
     border-radius: 100px;
     cursor: pointer;
-  }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
   }
   .go-to-map-button a {
     font-size: 16px;
@@ -1084,6 +1010,72 @@ section {
 }
 /* MOBILE-L size */
 @media screen and (331px < width <= 375px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h1 {
+    font-size: 22px;
+  }
+
+  .right-section h2 {
+    font-size: 11px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+
+  .right-section p {
+    font-size: 9px;
+    margin-top: -3px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 4px;
+    font-size: 6px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+
   /* NAVBAR */
   .logo {
     height: 2.5rem;
@@ -1117,8 +1109,6 @@ section {
     margin-top: 38px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -1129,50 +1119,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    position: relative;
-    margin-top: 7%;
-    width: 44%;
-    left: -93px;
-    object-fit: contain;
-    z-index: -1;
-  }
-  .background_1 {
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
-  .background_2 {
-    margin-top: -3rem;
-    margin-right: 155px;
-    padding-left: 243px;
-    font-size: 24px;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: -116px;
-  }
-  .content-title {
-    opacity: 0;
-  }
-  .content-desc1 {
-    font-size: 13px;
-    margin-top: -111px;
-    margin-left: 106px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
-  }
+
   section {
     padding: 1rem;
     height: 77%;
@@ -1192,9 +1139,7 @@ section {
     border-radius: 100px;
     cursor: pointer;
   }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
-  }
+
   .go-to-map-button a {
     font-size: 16px;
     color: #fff;
@@ -1327,8 +1272,81 @@ section {
   }
 }
 
+@media screen and (431px <= width <= 511px) {
+  .right-section h1 {
+    font-size: 29px;
+  }
+}
+@media screen and (511px <= width <= 611px) {
+  .right-section h1 {
+    font-size: 35px;
+  }
+}
+
 /* TABLET-M size */
 @media screen and (431px <= width <= 611px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h2 {
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+
+  .right-section p {
+    font-size: 12px;
+    margin-top: -3px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    font-size: 9px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+
   .logo {
     height: 3rem;
     width: 3rem;
@@ -1371,8 +1389,8 @@ section {
     margin-top: 38px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
+    /* margin-top: 25px;
+    margin-bottom: 55px; */
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -1383,74 +1401,8 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    position: relative;
-    margin-top: 9%;
-    /* width: 48%; */
-    left: -92px;
-    object-fit: contain;
-    z-index: -1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
 
-  .background_2 {
-    width: 115%;
-    margin-top: 6rem;
-    margin-right: 6rem;
-    font-family: "mainfont";
-    font-size: 34px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: -20px;
-  }
-  .content-title {
-    font-size: 15px;
-    margin-top: 115px;
-    margin-left: 212px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-  }
-  .content-desc1 {
-    font-size: 11px;
-    margin-top: -27px;
-    margin-left: 209px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
-  }
+
   section {
     padding: 1rem;
     height: auto;
@@ -1470,9 +1422,7 @@ section {
     border-radius: 100px;
     cursor: pointer;
   }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
-  }
+
   .go-to-map-button a {
     font-size: 17px;
     color: #fff;
@@ -1602,43 +1552,81 @@ section {
   }
 }
 
-@media screen and (431px <= width <= 481px)
-{
-  .background_1{
-    width: 45%;
-  }
-}
-@media screen and (481px <= width <= 546px)
-{
-  .background_1{
-    width: 40%;
-  }
-}
-@media screen and (546px <= width <= 601px)
-{
-  .background_1{
-    margin-top: 5%;
-    width: 38%;
-  }
-}
-@media screen and (601px <= width <= 611px)
-{
-  .background_1{
-    margin-top: 5%;
-    width: 36%;
-  }
-}
+
+
 
 /* TABLET-L size */
 @media screen and (611px <= width <= 769px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h1 {
+    font-size: 38px;
+  }
+  .right-section h2 {
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+
+  .right-section p {
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    font-size: 9px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
   .logo {
     height: 3rem;
     width: 3rem;
     margin: 35px 12px;
     margin-top: 22px;
-  
   }
- 
 
   .signup,
   .login {
@@ -1676,8 +1664,6 @@ section {
     margin-top: 38px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -1688,74 +1674,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    position: relative;
-    margin-top: 5%;
-    width: 35%;
-    left: -95px;
-    object-fit: contain;
-    z-index: -1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
 
-  .background_2 {
-    width: 115%;
-    margin-top: 11rem;
-    margin-right: 4rem;
-    font-family: "mainfont";
-    font-size: 37px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: -10px;
-  }
-  .content-title {
-    font-size: 18px;
-    margin-top: 164px;
-    margin-left: 242px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-  }
-  .content-desc1 {
-    font-size: 12px;
-    margin-top: -27px;
-    margin-left: 241px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
-  }
   section {
     padding: 1rem;
     height: auto;
@@ -1774,9 +1693,6 @@ section {
     padding-bottom: 14px;
     border-radius: 100px;
     cursor: pointer;
-  }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
   }
   .go-to-map-button a {
     font-size: 18px;
@@ -1907,15 +1823,74 @@ section {
   }
 }
 
-@media screen and (718px <= width <= 769px)
-{
-  .background_1{
-    width: 30%;
-  }
-}
 
 /* LAPTOP-M size */
 @media screen and (769px <= width <= 1025px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section h1 {
+    font-size: 46px;
+  }
+  .right-section h2 {
+    font-size: 22px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+
+  .right-section p {
+    font-size: 15px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 7px 7px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+
   .logo {
     height: 3rem;
     width: 3rem;
@@ -1958,8 +1933,6 @@ section {
     margin-top: 45px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -1969,73 +1942,6 @@ section {
     height: 66%;
     transform-style: preserve-3d;
     z-index: -1;
-  }
-  .background_1 {
-    position: relative;
-    margin-top: 2%;
-    width: 29%;
-    left: -125px;
-    object-fit: contain;
-    z-index: -1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
-
-  .background_2 {
-    margin-top: 13rem;
-    margin-right: 0.5rem;
-    font-family: "mainfont";
-    font-size: 55px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: 75px;
-  }
-  .content-title {
-    font-size: 22px;
-    margin-top: 168px;
-    margin-left: 361px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-  }
-  .content-desc1 {
-    font-size: 16px;
-    margin-top: -27px;
-    margin-left: 377px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
   }
   section {
     padding: 1rem;
@@ -2056,9 +1962,9 @@ section {
     border-radius: 100px;
     cursor: pointer;
   }
-  .donate-request-gotomap:hover {
+  /* .donate-request-gotomap:hover {
     border: 2px solid white;
-  }
+  } */
   .go-to-map-button a {
     font-size: 20px;
     color: #fff;
@@ -2190,8 +2096,100 @@ section {
   }
 }
 
+@media screen and (1350px <= width <= 1441px) {
+  .right-section h1 {
+    font-size: 71px;
+  }
+  .right-section h2 {
+    font-size: 34px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 45px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .right-section p {
+    font-size: 24px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (1025px <= width <= 1350px) {
+  .right-section h1 {
+    font-size: 57px;
+  }
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .right-section h2 {
+    font-size: 29px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+  .right-section p {
+    font-size: 20px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
+  }
+}
+
 /* LAPTOP-L AND DESKTOP size */
 @media screen and (1025px <= width <= 1441px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+
   .logo {
     height: 3.5rem;
     width: 3.5rem;
@@ -2234,8 +2232,6 @@ section {
     margin-top: 45px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -2245,74 +2241,6 @@ section {
     height: 78%;
     transform-style: preserve-3d;
     z-index: -1;
-  }
-  .background_1 {
-    position: relative;
-    margin-top: 5%;
-    width: 31%;
-    left: -15rem;
-    object-fit: contain;
-    z-index: -1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
-
-  .background_2 {
-    width: 115%;
-    margin-top: 21rem;
-    margin-right: -5.5rem;
-    font-family: "mainfont";
-    font-size: 86px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: 19rem;
-  }
-  .content-title {
-    font-size: 35px;
-    margin-top: 168px;
-    margin-left: 344px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-  }
-  .content-desc1 {
-    font-size: 23px;
-    margin-top: -27px;
-    margin-left: 349px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 11px;
   }
   section {
     padding: 1rem;
@@ -2333,9 +2261,6 @@ section {
     border-radius: 100px;
     cursor: pointer;
   }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
-  }
   .go-to-map-button a {
     font-size: 24px;
     color: #fff;
@@ -2470,14 +2395,69 @@ section {
   }
 }
 
-@media screen and (1399px <= width <= 1441px){
-  .background_1{
-    margin-top: 0%;
-    width: 31%;
-    left: -16rem;
-  }
-}
 @media screen and (1441px <= width <= 2561px) {
+  /* LANDING PAGE */
+  .landing-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left-section {
+    flex: 1.5;
+  }
+
+  .left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .right-section span {
+    margin-top: -10px;
+    color: rgb(203, 6, 6);
+  }
+
+  .right-section button:hover {
+    background-color: darkred;
+  }
+  .right-section h1 {
+    font-size: 71px;
+  }
+  .right-section h2 {
+    font-size: 34px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 45px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .right-section p {
+    font-size: 24px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
+  }
+
   .logo {
     height: 3.5rem;
     width: 3.5rem;
@@ -2520,8 +2500,6 @@ section {
     margin-top: 45px;
   }
   header {
-    margin-top: 25px;
-    margin-bottom: 55px;
     position: relative;
     display: flex;
     grid-template-rows: 500px -2px 40px 40px 40px;
@@ -2532,79 +2510,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
   }
-  .background_1 {
-    opacity: 1;
-    position: relative;
-    margin-top: 3%;
-    /* width: 28%; */
-    left: -17rem;
-    object-fit: contain;
-    z-index: 1;
-    padding-left: 68px;
-    animation: float 5s ease-in-out infinite;
-  }
 
-  .background_2 {
-    width: 115%;
-    margin-top: 28rem;
-    margin-right: -9.5rem;
-    font-family: "mainfont";
-    font-size: 97px;
-    position: fixed;
-    background-image: linear-gradient(
-      -225deg,
-      #fcf006 0%,
-      #ff0000 29%,
-      #b54141 67%,
-      rgb(68, 4, 4) 100%
-    );
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 6s linear infinite;
-    display: inline-block;
-    z-index: 1;
-  }
-  .background_writting {
-    font-size: -55rem;
-    color: black;
-    text-shadow: 0 0 5px beige;
-    font-family: "mainfont";
-    grid-row-end: 6;
-    grid-column-end: 3;
-    letter-spacing: 1px;
-    padding-left: -17px;
-    margin-top: 28rem;
-    z-index: 1;
-  }
-  .content-title {
-    font-size: 35px;
-    margin-top: 168px;
-    margin-left: 416px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    grid-column-start: 1;
-    color: black;
-    font-weight: bold;
-    padding: 11px;
-    z-index: 1;
-  }
-  .content-desc1 {
-    font-size: 23px;
-    margin-top: -27px;
-    margin-left: 421px;
-    font-family: "mainfont";
-    grid-column-start: 2;
-    color: black;
-    display: flex;
-    z-index: 1;
-    flex-direction: column;
-    gap: 13px;
-    padding: 11px;
-  }
   section {
     padding: 1rem;
     height: 28rem;
@@ -2623,9 +2529,6 @@ section {
     padding-bottom: 14px;
     border-radius: 100px;
     cursor: pointer;
-  }
-  .donate-request-gotomap:hover {
-    border: 2px solid white;
   }
   .go-to-map-button a {
     font-size: 24px;
@@ -2761,79 +2664,81 @@ section {
   }
 }
 
-@media screen and (1441px <= width <= 1751px)
-{
-  .background_1{
-    width: 28%;
+@media screen and (1441px <= width <= 1665px) {
+  .right-section h1 {
+    font-size: 71px;
+  }
+  .right-section h1 {
+    font-size: 71px;
+  }
+  .right-section h2 {
+    font-size: 34px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
+  }
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 45px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .right-section p {
+    font-size: 24px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
   }
 }
 
-@media screen and (1751px <= width <= 2179px)
-{
-  .background_1{
-    width: 24%;
+@media screen and (1665px <= width <= 2561px) {
+  .right-section h1 {
+    font-size: 95px;
+  }
+  .right-section button {
+    align-self: flex-start;
+    margin-top: 45px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .right-section p {
+    font-size: 30px;
+    margin-top: -1px;
+    margin-bottom: 0.5em;
+  }
+  .right-section h2 {
+    font-size: 43px;
+    text-align: left;
+    color: white;
+    margin-top: -4px;
   }
 }
 
-@media screen and (2179px <= width <= 2561px)
-{
-  .content-desc1{
-    font-size: 40px;
-    margin-top: -15px;
-    margin-left: 55rem;
-    gap: 16px;
-  }
-  .content-title{
-    font-size: 60px;
-    margin-top: 168px;
-    margin-left: 54rem;
-  }
-  .background_writting{
-    margin-top: 48rem;
-  }
-  .background_2{
-    margin-top: 48rem;
-    margin-right: -23.5rem;
-    font-size: 125px;
-  }
-  .background_1{
-    margin-top: 3%;
-    width: 23%;
-    left: -17rem;
-  }
-  .logo{
+@media screen and (2179px <= width <= 2561px) {
+
+  .logo {
     height: 4.5rem;
     width: 4.5rem;
     margin-top: 38px;
   }
-  .leftmost-tagline{
+  .leftmost-tagline {
     font-size: 32px;
   }
-  .left-tagline{
+  .left-tagline {
     font-size: 32px;
     margin-top: 66px;
   }
-  .signup{
+  .signup {
     margin-top: 1rem;
   }
-  .background_2{
-    margin-top: 26rem;
-    margin-right: -8.5rem ;
-  }
-  .background_writting{
-    margin-top: 24rem;
-  }
-  .content-title{
-    margin-left: 34rem;
-  }
-  .content-desc1{
-    margin-left: 35rem;
-  }
+
 }
 
-@media screen and (769px <= width <= 850px)
-{
-  .background_1{
-    width: 32%;
-  }
-}
+
