@@ -228,7 +228,7 @@ const MapSection = ({ authorized, userRole }) => {
     try {
       console.log("INTO FETCH HOSPITAL FUNCTION");
       const response = await axios.get(
-        `http://localhost:8080/api/v1/auth/mapLocate/${latitude}/${longitude}/${bloodType}`
+        `https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/mapLocate/${latitude}/${longitude}/${bloodType}`
       );
       const data = await response.data.results;
       console.log(data);

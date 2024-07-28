@@ -25,7 +25,7 @@ const Information = () => {
     try 
     {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/auth/getstatistics");
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/getstatistics");
       
         // console.log(response.data)
         setStatsData(response.data)
@@ -100,10 +100,6 @@ const Information = () => {
         <h3>Number Of Recipients</h3>
             <p>{statsData.requestsCount}</p>
         </div>
-        {/* <div className='no_of_donors'>
-        <h3>Number Of Donors</h3>
-            <p>{statsData.donorsCount}</p>
-        </div> */}
         <div className='l_of_blood'>
         <h3>Litres of Blood recieved</h3>
             <p>{statsData.totalRequestBloodUnits} units</p>

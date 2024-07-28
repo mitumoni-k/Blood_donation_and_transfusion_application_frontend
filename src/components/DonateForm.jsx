@@ -73,7 +73,7 @@ const DonateForm = ({token,decodedToken}) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/donate",
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/donate",
         {
           requestedBody,
           role,

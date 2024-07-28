@@ -62,7 +62,7 @@ const MyProfile = () => {
 
         const { role } = decodedToken;
         const response = await axios.get(
-          "http://localhost:8080/api/v1/auth/myprofile",
+          "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/myprofile",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -134,7 +134,7 @@ const MyProfile = () => {
       };
 
       await axios.put(
-        "http://localhost:8080/api/v1/auth/updateprofile",
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/updateprofile",
         updatedProfile,
         {
           headers: {
@@ -182,7 +182,7 @@ const MyProfile = () => {
   const handleAddInventory = async () => {
     try {
       await axios.post(
-        "http://localhost:8080/api/v1/auth/inventory",
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/inventory",
         {
           bloodUnitId,
           bloodType,
@@ -228,7 +228,7 @@ const MyProfile = () => {
   const handleShowInventory = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/auth/showinventory",
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/showinventory",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -272,7 +272,7 @@ const MyProfile = () => {
       };
       console.log(updatedData);
       await axios.put(
-        `http://localhost:8080/api/v1/auth/inventory/${registrationId}/${bloodUnitId}`,
+        `https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/inventory/${registrationId}/${bloodUnitId}`,
         updatedData,
         {
           headers: {
@@ -315,7 +315,7 @@ const MyProfile = () => {
   const handleDeleteInventory = async (bloodUnitId) => {
     try {
       await axios.delete(
-        `http://localhost:8080/api/v1/auth/inventory/${registrationId}/${bloodUnitId}`,
+        `https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/inventory/${registrationId}/${bloodUnitId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -355,7 +355,7 @@ const MyProfile = () => {
   const fetchHistoryData = async () => {
     try {
       const requestResponse = await axios.get(
-        "http://localhost:8080/api/v1/auth/requesthistory",
+        "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/requesthistory",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -365,7 +365,7 @@ const MyProfile = () => {
       setRequestHistoryData(requestResponse.data.data);
       if (role === "user") {
         const donateResponse = await axios.get(
-          "http://localhost:8080/api/v1/auth/donatehistory",
+          "https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/donatehistory",
           {
             headers: {
               Authorization: `Bearer ${token}`,

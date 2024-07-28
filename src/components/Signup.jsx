@@ -49,7 +49,7 @@ const SignUp = ({fcmToken}) => {
         console.log({Name, email , role, phoneno, password , address , registrationId });
         // Implement API call .and send data
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/auth/register', {
+            const response = await axios.post('https://blood-donation-transfusion-backend.onrender.com/api/v1/auth/register', {
               role,
               Name,
               email,
