@@ -16,7 +16,7 @@ const SliderSection = () => {
 
   const fetchNews = async () => {
     try {
-      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=de9c498ea0384b5b9bdd03581bb2afa6`);
+      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=de9c498ea0384b5b9bdd03581bb2afa6`);
       const data = await response.json();
       const filteredData = data.articles.filter(article => article.urlToImage !== null);
       setNewsData(filteredData);
